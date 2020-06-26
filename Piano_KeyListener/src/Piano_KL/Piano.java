@@ -473,7 +473,7 @@ L9.setText      ("\n");
 L10.setText     ("       Created By Josedavidpc310        ");       
 //Detendre el audio
 //Pero primero me asegurare de que se reproduzca adecuadamente(Mentira, me quedo grande...quizas luego).
-Bit.stop();
+//Bit.stop();//Esto detendria el audio pero no suena bien hacerlo de golpe.
 
 //Ahora que la tecla a sido soltada actualizare la variable auxiliar.
 //permitiendonos volver a presionar la misma nota en el piano.
