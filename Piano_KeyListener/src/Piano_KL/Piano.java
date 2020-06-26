@@ -9,7 +9,8 @@ import java.applet.AudioClip;
 //@Created By Josedavidpc310
 
 //fijense que en la siguiente linea se añade: implements KeyListener
-public class Piano extends javax.swing.JFrame implements KeyListener {
+public class Piano extends javax.swing.JFrame implements KeyListener
+{
     //Declaracion de variables.
     
     //Variable para la nota musical.
@@ -20,7 +21,8 @@ public class Piano extends javax.swing.JFrame implements KeyListener {
     int keys=0;
     
      //Determinar como iniciara el programa.
-     public Piano(){
+     public Piano()
+     {
         initComponents();
         addKeyListener(this);
         L1.setText      (" _______________________________________\n");
@@ -168,9 +170,11 @@ public class Piano extends javax.swing.JFrame implements KeyListener {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+    public static void main(String args[])
+    {
+        java.awt.EventQueue.invokeLater(new Runnable(){
+            public void run()
+            {
                 new Piano().setVisible(true);
             }
         });
@@ -189,294 +193,299 @@ public class Piano extends javax.swing.JFrame implements KeyListener {
     private javax.swing.JLabel L9;
     // End of variables declaration//GEN-END:variables
 
-//Eventos del KeyListener    
-@Override
-public void keyTyped(KeyEvent e) {
-//KeyTyped ejecutara sus lineas tras haber presionado y soltado una tecla.
-}
+    //Eventos del KeyListener    
+    @Override
+    public void keyTyped(KeyEvent e)
+    {
+    //KeyTyped ejecutara sus lineas tras haber presionado y soltado una tecla.
+    }
 
-@Override
-public void keyPressed(KeyEvent e) {
-//KeyPressed ejecuta sus lineas de codigo al presionar una tecla.
-key = e.getKeyCode();
-if (key!=keys) {
-switch(key){
-case KeyEvent.VK_Q:
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|█| | | |  |  | | | | | |  |  | | | |  |\n");
-L3.setText      ("|█| | | |  |  | | | | | |  |  | | | |  |\n");
-L4.setText      ("|█| | | |  |  | | | | | |  |  | | | |  |\n");
-L5.setText      ("|█|_| |_|  |  |_| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|██|   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|██|   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|██|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_W):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | |█| |  |  | | | | | |  |  | | | |  |\n");
-L3.setText      ("|  | |█| |  |  | | | | | |  |  | | | |  |\n");
-L4.setText      ("|  | |█| |  |  | | | | | |  |  | | | |  |\n");
-L5.setText      ("|  |_|█|_|  |  |_| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |██|   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |██|   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|██|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Re.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_E):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |█|  | | | | | |  |  | | | |  |\n");
-L3.setText      ("|  | | | |█|  | | | | | |  |  | | | |  |\n");
-L4.setText      ("|  | | | |█|  | | | | | |  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|█|  |_| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |██|   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |██|   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|██|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_R):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |█| | | | | |  |  | | | |  |\n");
-L3.setText      ("|  | | | |  |█| | | | | |  |  | | | |  |\n");
-L4.setText      ("|  | | | |  |█| | | | | |  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |█|_| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |██|   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |██|   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|██|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Fa.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_T):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | |█| | | |  |  | | | |  |\n");
-L3.setText      ("|  | | | |  |  | |█| | | |  |  | | | |  |\n");
-L4.setText      ("|  | | | |  |  | |█| | | |  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_|█|_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |██|   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |██|   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|██|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Sol.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_Y):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | |█| |  |  | | | |  |\n");
-L3.setText      ("|  | | | |  |  | | | |█| |  |  | | | |  |\n");
-L4.setText      ("|  | | | |  |  | | | |█| |  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_|█|_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |██|   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |██|   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|██|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/La.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_U):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | | |█|  | | | |  |\n");
-L3.setText      ("|  | | | |  |  | | | | | |█|  | | | |  |\n");
-L4.setText      ("|  | | | |  |  | | | | | |█|  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |_|█|  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |██|   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |██|   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|██|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Si.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_I):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | | |  |█| | | |  |\n");
-L3.setText      ("|  | | | |  |  | | | | | |  |█| | | |  |\n");
-L4.setText      ("|  | | | |  |  | | | | | |  |█| | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |█|_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |██|   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |██|   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|██|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_O):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | | |  |  | |█| |  |\n");
-L3.setText      ("|  | | | |  |  | | | | | |  |  | |█| |  |\n");
-L4.setText      ("|  | | | |  |  | | | | | |  |  | |█| |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_|█|_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |██|   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |██|   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|██|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Re.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_P):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | | |  |  | | | |█|\n");
-L3.setText      ("|  | | | |  |  | | | | | |  |  | | | |█|\n");
-L4.setText      ("|  | | | |  |  | | | | | |  |  | | | |█|\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_| |_|█|\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |██|\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |██|\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|██|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_2):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  |█| | |  |  | | | | | |  |  | | | |  |\n");
-L3.setText      ("|  |█| | |  |  | | | | | |  |  | | | |  |\n");
-L4.setText      ("|  |█| | |  |  | | | | | |  |  | | | |  |\n");
-L5.setText      ("|  |█| |_|  |  |_| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do#.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_3):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | |█|  |  | | | | | |  |  | | | |  |\n");
-L3.setText      ("|  | | |█|  |  | | | | | |  |  | | | |  |\n");
-L4.setText      ("|  | | |█|  |  | | | | | |  |  | | | |  |\n");
-L5.setText      ("|  |_| |█|  |  |_| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi#.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_4):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  |█| | | | |  |  | | | |  |\n");
-L3.setText      ("|  | | | |  |  |█| | | | |  |  | | | |  |\n");
-L4.setText      ("|  | | | |  |  |█| | | | |  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |█| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Fa#.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_5):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | |█| | |  |  | | | |  |\n");
-L3.setText      ("|  | | | |  |  | | |█| | |  |  | | | |  |\n");
-L4.setText      ("|  | | | |  |  | | |█| | |  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |█| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Sol#.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_6):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | |█|  |  | | | |  |\n");
-L3.setText      ("|  | | | |  |  | | | | |█|  |  | | | |  |\n");
-L4.setText      ("|  | | | |  |  | | | | |█|  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |█|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Si#.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_9):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | | |  |  |█| | |  |\n");
-L3.setText      ("|  | | | |  |  | | | | | |  |  |█| | |  |\n");
-L4.setText      ("|  | | | |  |  | | | | | |  |  |█| | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |█| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do#.wav"));
-Bit.play();
-keys=key;
-;break;
-case(KeyEvent.VK_0):
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | | |  |  | | |█|  |\n");
-L3.setText      ("|  | | | |  |  | | | | | |  |  | | |█|  |\n");
-L4.setText      ("|  | | | |  |  | | | | | |  |  | | |█|  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_| |█|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");      
-Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi#.wav"));
-Bit.play();
-keys=key;
-;break;
-}
-}
-}
-@Override
-public void keyReleased(KeyEvent e) {
-L1.setText      (" _______________________________________\n");
-L2.setText      ("|  | | | |  |  | | | | | |  |  | | | |  |\n");
-L3.setText      ("|  | | | |  |  | | | | | |  |  | | | |  |\n");
-L4.setText      ("|  | | | |  |  | | | | | |  |  | | | |  |\n");
-L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_| |_|  |\n");
-L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
-L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
-L9.setText      ("\n");
-L10.setText     ("       Created By Josedavidpc310        ");       
-//Detendre el audio
-//Pero primero me asegurare de que se reproduzca adecuadamente(Mentira, me quedo grande...quizas luego).
-//Bit.stop();//Esto detendria el audio pero no suena bien hacerlo de golpe.
+    @Override
+    public void keyPressed(KeyEvent e) 
+    {
+    //KeyPressed ejecuta sus lineas de codigo al presionar una tecla.
+        key = e.getKeyCode();
+        if (key!=keys)
+        {
+            switch(key)
+            {
+            case KeyEvent.VK_Q:
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|█| | | |  |  | | | | | |  |  | | | |  |\n");
+            L3.setText      ("|█| | | |  |  | | | | | |  |  | | | |  |\n");
+            L4.setText      ("|█| | | |  |  | | | | | |  |  | | | |  |\n");
+            L5.setText      ("|█|_| |_|  |  |_| |_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|██|   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|██|   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|██|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_W):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | |█| |  |  | | | | | |  |  | | | |  |\n");
+            L3.setText      ("|  | |█| |  |  | | | | | |  |  | | | |  |\n");
+            L4.setText      ("|  | |█| |  |  | | | | | |  |  | | | |  |\n");
+            L5.setText      ("|  |_|█|_|  |  |_| |_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |██|   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |██|   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|██|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Re.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_E):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |█|  | | | | | |  |  | | | |  |\n");
+            L3.setText      ("|  | | | |█|  | | | | | |  |  | | | |  |\n");
+            L4.setText      ("|  | | | |█|  | | | | | |  |  | | | |  |\n");
+            L5.setText      ("|  |_| |_|█|  |_| |_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |██|   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |██|   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|██|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_R):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |█| | | | | |  |  | | | |  |\n");
+            L3.setText      ("|  | | | |  |█| | | | | |  |  | | | |  |\n");
+            L4.setText      ("|  | | | |  |█| | | | | |  |  | | | |  |\n");
+            L5.setText      ("|  |_| |_|  |█|_| |_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |██|   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |██|   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|██|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Fa.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_T):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | |█| | | |  |  | | | |  |\n");
+            L3.setText      ("|  | | | |  |  | |█| | | |  |  | | | |  |\n");
+            L4.setText      ("|  | | | |  |  | |█| | | |  |  | | | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_|█|_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |██|   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |██|   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|██|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Sol.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_Y):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | |█| |  |  | | | |  |\n");
+            L3.setText      ("|  | | | |  |  | | | |█| |  |  | | | |  |\n");
+            L4.setText      ("|  | | | |  |  | | | |█| |  |  | | | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_|█|_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |██|   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |██|   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|██|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/La.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_U):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | | | |█|  | | | |  |\n");
+            L3.setText      ("|  | | | |  |  | | | | | |█|  | | | |  |\n");
+            L4.setText      ("|  | | | |  |  | | | | | |█|  | | | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_| |_|█|  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |██|   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |██|   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|██|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Si.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_I):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | | | |  |█| | | |  |\n");
+            L3.setText      ("|  | | | |  |  | | | | | |  |█| | | |  |\n");
+            L4.setText      ("|  | | | |  |  | | | | | |  |█| | | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |█|_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |██|   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |██|   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|██|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_O):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | | | |  |  | |█| |  |\n");
+            L3.setText      ("|  | | | |  |  | | | | | |  |  | |█| |  |\n");
+            L4.setText      ("|  | | | |  |  | | | | | |  |  | |█| |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_|█|_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |██|   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |██|   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|██|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Re.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_P):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | | | |  |  | | | |█|\n");
+            L3.setText      ("|  | | | |  |  | | | | | |  |  | | | |█|\n");
+            L4.setText      ("|  | | | |  |  | | | | | |  |  | | | |█|\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_| |_|█|\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |██|\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |██|\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|██|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_2):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  |█| | |  |  | | | | | |  |  | | | |  |\n");
+            L3.setText      ("|  |█| | |  |  | | | | | |  |  | | | |  |\n");
+            L4.setText      ("|  |█| | |  |  | | | | | |  |  | | | |  |\n");
+            L5.setText      ("|  |█| |_|  |  |_| |_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do#.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_3):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | |█|  |  | | | | | |  |  | | | |  |\n");
+            L3.setText      ("|  | | |█|  |  | | | | | |  |  | | | |  |\n");
+            L4.setText      ("|  | | |█|  |  | | | | | |  |  | | | |  |\n");
+            L5.setText      ("|  |_| |█|  |  |_| |_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi#.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_4):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  |█| | | | |  |  | | | |  |\n");
+            L3.setText      ("|  | | | |  |  |█| | | | |  |  | | | |  |\n");
+            L4.setText      ("|  | | | |  |  |█| | | | |  |  | | | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |█| |_| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Fa#.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_5):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | |█| | |  |  | | | |  |\n");
+            L3.setText      ("|  | | | |  |  | | |█| | |  |  | | | |  |\n");
+            L4.setText      ("|  | | | |  |  | | |█| | |  |  | | | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |█| |_|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Sol#.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_6):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | | |█|  |  | | | |  |\n");
+            L3.setText      ("|  | | | |  |  | | | | |█|  |  | | | |  |\n");
+            L4.setText      ("|  | | | |  |  | | | | |█|  |  | | | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_| |█|  |  |_| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Si#.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_9):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | | | |  |  |█| | |  |\n");
+            L3.setText      ("|  | | | |  |  | | | | | |  |  |█| | |  |\n");
+            L4.setText      ("|  | | | |  |  | | | | | |  |  |█| | |  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |█| |_|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Do#.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            case(KeyEvent.VK_0):
+            L1.setText      (" _______________________________________\n");
+            L2.setText      ("|  | | | |  |  | | | | | |  |  | | |█|  |\n");
+            L3.setText      ("|  | | | |  |  | | | | | |  |  | | |█|  |\n");
+            L4.setText      ("|  | | | |  |  | | | | | |  |  | | |█|  |\n");
+            L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_| |█|  |\n");
+            L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+            L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+            L9.setText      ("\n");
+            L10.setText     ("       Created By Josedavidpc310        ");      
+            Bit = java.applet.Applet.newAudioClip(getClass().getResource("/Sound/Mi#.wav"));
+            Bit.play();
+            keys=key;
+            ;break;
+            }
+        }
+    }
+    @Override
+    public void keyReleased(KeyEvent e)
+    {
+    L1.setText      (" _______________________________________\n");
+    L2.setText      ("|  | | | |  |  | | | | | |  |  | | | |  |\n");
+    L3.setText      ("|  | | | |  |  | | | | | |  |  | | | |  |\n");
+    L4.setText      ("|  | | | |  |  | | | | | |  |  | | | |  |\n");
+    L5.setText      ("|  |_| |_|  |  |_| |_| |_|  |  |_| |_|  |\n");
+    L6.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+    L7.setText      ("|   |   |   |   |   |   |   |   |   |   |\n");
+    L8.setText      ("|___|___|___|___|___|___|___|___|___|___|\n");
+    L9.setText      ("\n");
+    L10.setText     ("       Created By Josedavidpc310        ");       
+    //Detendre el audio
+    //Pero primero me asegurare de que se reproduzca adecuadamente(Mentira, me quedo grande...quizas luego).
+    //Bit.stop();//Esto detendria el audio pero no suena bien hacerlo de golpe.
 
-//Ahora que la tecla a sido soltada actualizare la variable auxiliar.
-//permitiendonos volver a presionar la misma nota en el piano.
-keys=246928;
+    //Ahora que la tecla a sido soltada actualizare la variable auxiliar.
+    //permitiendonos volver a presionar la misma nota en el piano.
+    keys=246928;
     }
 }
