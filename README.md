@@ -497,5 +497,3 @@ public class Piano extends javax.swing.JFrame implements KeyListener
     }
 }
 ```
-**E**
-![alt text](https://github.com/Josedavidpc310/Piano-in-Java/blob/master/Piano_KeyListener/src/Piano_KL/Piano.java)
